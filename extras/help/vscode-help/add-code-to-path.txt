@@ -1,0 +1,16 @@
+
+===============================================
+
+Add code to Path:
+sudo ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /opt/homebrew/bin/code
+code --list-extensions > extensions-simple.txt
+code-insiders --list-extensions > extensions-simple.txt
+
+===============================================
+
+Add code-insiders to Path:
+sudo ln -s "/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin/code-insiders" /opt/homebrew/bin/code-insiders
+code --list-extensions --show-versions > extensions-with-versions.txt
+code-insiders --list-extensions --show-versions > extensions-with-versions.txt
+
+===============================================
