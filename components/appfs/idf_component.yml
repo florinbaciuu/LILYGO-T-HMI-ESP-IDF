@@ -1,0 +1,17 @@
+dependencies:
+  cmake_utilities: 0.*
+  idf: '>=5.3'
+description: AppFS
+issues: https://github.com/badgeteam/esp32-component-appfs/issues
+license: Beerware
+repository: git://github.com/badgeteam/esp32-component-appfs.git
+repository_info:
+  commit_sha: 4d09f2377406f8cdaca7e9b017f8c9dd99462cee
+  path: .
+targets:
+- esp32
+- esp32s3
+- esp32c6
+- esp32p4
+url: https://github.com/badgeteam/esp32-component-appfs
+version: 1.0.2

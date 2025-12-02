@@ -19,6 +19,42 @@ set(
 
 set(
     app_requires
+    coremark
+    esp-file-iterator
+    esp_mmap_assets
+    fmt
+    esp_lcd_touch
+    esp_lcd_touch_xpt2046
+    lvgl
+    esp_lvgl_port
+    esp_lv_decoder
+    esp_emote_gfx
+    esp_new_jpeg
+    esp_lv_fs
+    button
+    esp-lib-utils
+    littlefs
+    xz
+    zlib
+    libpng
+    coremark
+    extended_vfs
+    esp_tinyusb
+    esp_schedule
+    esp_cli 
+    esp_cli_commands
+    esp_linenoise #dezactiveaza neaparat console componenta din IDF
+    argtable3
+    esp-brookesia
+)
+
+set(
+    app_priv_requires
+    ${app_requires}
+    esp_bootloader_format
+    nvs_flash
+    esp_wifi
+    esp_rom
     driver
     fatfs
     spi_flash
@@ -30,22 +66,7 @@ set(
     esp_hw_support
     esp_wifi
     esp_lcd
-    esp-file-iterator
-    fmt
-    esp_lcd_touch
-    esp_lcd_touch_xpt2046
-    lvgl
-    esp_lvgl_port
-)
-
-set(
-    app_priv_requires
-    ${app_requires}
-    esp_bootloader_format
-    nvs_flash
-    esp_wifi
-    console
-    esp_rom
+    #console #pentru ca linenoise
 )
 
 # Set my components

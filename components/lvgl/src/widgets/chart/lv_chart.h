@@ -36,7 +36,8 @@ LV_EXPORT_CONST_INT(LV_CHART_POINT_NONE);
 typedef enum {
     LV_CHART_TYPE_NONE,     /**< Don't draw the series*/
     LV_CHART_TYPE_LINE,     /**< Connect the points with lines*/
-    LV_CHART_TYPE_BAR,      /**< Draw columns*/
+    LV_CHART_TYPE_BAR,      /**< Draw bars for each series*/
+    LV_CHART_TYPE_STACKED,  /**< Draw a single stacked bar for each data point. Supports only positive values*/
     LV_CHART_TYPE_SCATTER,  /**< Draw points and lines in 2D (x,y coordinates)*/
 } lv_chart_type_t;
 
@@ -250,6 +251,13 @@ lv_chart_series_t * lv_chart_get_series_next(const lv_obj_t * chart, const lv_ch
  * @return          pointer to the created cursor
  */
 lv_chart_cursor_t  * lv_chart_add_cursor(lv_obj_t * obj, lv_color_t color, lv_dir_t dir);
+
+/**
+ * Remove a cursor
+ * @param obj       pointer to chart object
+ * @param cursor    pointer to the cursor
+ */
+void lv_chart_remove_cursor(lv_obj_t * obj, lv_chart_cursor_t * cursor);
 
 /**
  * Set the coordinate of the cursor with respect to the paddings

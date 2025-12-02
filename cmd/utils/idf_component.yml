@@ -1,0 +1,14 @@
+dependencies:
+  idf: '>=4.2'
+description: QA base utils
+files:
+  exclude:
+  - .git*
+  - .pre-commit-config.yaml
+  - tools/**/*
+  - tools
+  - apps/**/*
+  - apps
+  - .cz.toml
+issues: https://github.com/espressif/iperf-cmd/issues
+version: 0.1.1

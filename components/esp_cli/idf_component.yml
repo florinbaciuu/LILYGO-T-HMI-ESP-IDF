@@ -1,0 +1,11 @@
+dependencies:
+  espressif/esp_cli_commands: '*'
+  espressif/esp_linenoise: '*'
+description: esp_cli — A command-line interface component that uses a REPL as its
+  main execution loop.
+repository: git://github.com/espressif/idf-extra-components.git
+repository_info:
+  commit_sha: 7f2963f5ab9e5b87589fb0a8005b771e21fd54ae
+  path: esp_cli
+url: https://github.com/espressif/idf-extra-components/tree/master/esp_cli
+version: 0.1.0

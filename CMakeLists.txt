@@ -16,6 +16,7 @@ set(
    EXTRA_COMPONENT_DIRS
    lib
    mylibs
+   cmd
 )
 
 # ---------- ccache ------------------

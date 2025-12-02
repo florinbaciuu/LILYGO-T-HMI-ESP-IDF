@@ -44,7 +44,7 @@ typedef enum {
 LV_ATTRIBUTE_EXTERN_DATA extern const lv_obj_class_t lv_slider_class;
 
 #if LV_USE_OBJ_PROPERTY
-enum {
+enum _lv_property_slider_id_t {
     LV_PROPERTY_ID2(SLIDER, VALUE,          LV_PROPERTY_TYPE_INT,   LV_PROPERTY_TYPE_BOOL,  0),
     LV_PROPERTY_ID2(SLIDER, LEFT_VALUE,     LV_PROPERTY_TYPE_INT,   LV_PROPERTY_TYPE_BOOL,  1),
     LV_PROPERTY_ID2(SLIDER, RANGE,          LV_PROPERTY_TYPE_INT,   LV_PROPERTY_TYPE_INT,   2),
@@ -182,6 +182,17 @@ lv_slider_orientation_t lv_slider_get_orientation(lv_obj_t * slider);
  * @return          true: in symmetrical mode false : not in
 */
 bool lv_slider_is_symmetrical(lv_obj_t * obj);
+
+
+#if LV_USE_OBSERVER
+/**
+ * Bind an integer or float Subject to a Slider's value.
+ * @param obj       pointer to Slider
+ * @param subject   pointer to Subject
+ * @return          pointer to newly-created Observer
+ */
+lv_observer_t * lv_slider_bind_value(lv_obj_t * obj, lv_subject_t * subject);
+#endif
 
 /**********************
  *      MACROS

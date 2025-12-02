@@ -1,0 +1,20 @@
+dependencies:
+  idf:
+    version: '>=4.4'
+description: Real-time system monitor for ESP-IDF projects with web-based dashboard
+  for CPU, stack, and memory monitoring
+files:
+  exclude:
+  - sysmon-demo.mp4
+license: MIT
+repository: https://github.com/mccannex/sysmon
+tags:
+- monitoring
+- system-monitor
+- web-dashboard
+- freertos
+- cpu-monitoring
+- memory-monitoring
+- stack-monitoring
+url: https://github.com/mccannex/sysmon
+version: 1.0.2

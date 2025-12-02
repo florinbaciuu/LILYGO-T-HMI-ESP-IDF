@@ -1,0 +1,36 @@
+# Build artifacts
+build/
+build-*/
+*.d
+*.o
+*.obj
+*.elf
+*.map
+*.bin
+
+# IDE/Editor files
+.vscode/
+.cursor/
+*.code-workspace
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ESP-IDF specific
+sdkconfig
+sdkconfig.old
+dependencies.lock
+
+# Distribution artifacts
+dist/
+
+# Example-specific (if any)
+example/build/
+example/sdkconfig
+example/sdkconfig.old
+
+# Make sure we include the sample config
+# example/main/wifi_credentials.h
+

@@ -98,6 +98,7 @@ void lv_example_label_3(void);
 void lv_example_label_4(void);
 void lv_example_label_5(void);
 void lv_example_label_6(void);
+void lv_example_label_7(void);
 
 void lv_example_led_1(void);
 
@@ -137,6 +138,7 @@ void lv_example_scale_8(void);
 void lv_example_scale_9(void);
 void lv_example_scale_10(void);
 void lv_example_scale_11(void);
+void lv_example_scale_12(void);
 
 void lv_example_slider_1(void);
 void lv_example_slider_2(void);

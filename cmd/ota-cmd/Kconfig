@@ -1,0 +1,17 @@
+menu "Console Command: OTA"
+
+    config OTA_CMD_USE_ESP_HTTPS_OTA
+        bool "Use high-level esp_https_ota APIs."
+        default n
+        select ESP_HTTPS_OTA_ALLOW_HTTP
+        help
+            Use high-level esp_https_ota APIs rather than low-level esp_ota APIs.
+            Will enable ESP_HTTPS_OTA_ALLOW_HTTP as well.
+
+    config OTA_CMD_SKIP_VERSION_CHECK
+        bool "OTA Skip Version Check"
+        default y
+        help
+            Do not check new app version, always do upgrade.
+
+endmenu

@@ -210,7 +210,7 @@
 		//
 		"C_Cpp.intelliSenseEngine": "default", // disabled, Tag Parser
 		"C_Cpp.intelliSenseCacheSize": 5120,
-		"C_Cpp.autocomplete": "default", // disabled, Default
+		"C_Cpp.autocomplete": "disabled", // disabled, Default
 		"[cpp]": {
 			"editor.wordBasedSuggestions": "currentDocument",
 			"editor.semanticHighlighting.enabled": true,
@@ -416,7 +416,7 @@
 		"idf.enableIdfComponentManager": false,
 		"clangd.inactiveRegions.useBackgroundHighlight": true,
 		"clangd.detectExtensionConflicts": false,
-		"clangd.enable": false,
+		"clangd.enable": true,
 		//--------
 		"css.completion.completePropertyWithSemicolon": true,
 		//----------------------------------------------------

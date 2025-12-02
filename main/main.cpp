@@ -117,7 +117,7 @@ extern "C" {
 #include "esp_lcd_touch_xpt2046.h"
 
 // my include
-#include "one-cli.h"
+//#include "one-cli.h"
 #include "filesystem-os.h"
 #include "ui.h"
 }
@@ -506,11 +506,11 @@ extern "C" void app_main(void) {
     gfx_set_backlight(1);
     esp_log_level_set("*", ESP_LOG_INFO);
 
-     boot_count++;
+    boot_count++;
     // ESP_LOGI("RTC", "Boot count (from RTC RAM): %lu", boot_count);
     // esp_sleep_enable_timer_wakeup(5000000);  // 5 secunde în microsecunde
-    //printf("addr boot_count = %p\n", &boot_count);
-    //printf("addr boot_count1 = %p\n", &boot_count1);
+    // printf("addr boot_count = %p\n", &boot_count);
+    // printf("addr boot_count1 = %p\n", &boot_count1);
 
     esp_bootloader_desc_t bootloader_desc;
 
@@ -750,13 +750,12 @@ extern "C" void app_main(void) {
 
     init_filesystem_sys();
     // initialize_filesystem_sdmmc() ;
-    StartCLI();
+    //StartCLI();
 
     s_lvgl_port_init_locking_mutex();
     esp_rom_delay_us(100);
     s_lvgl_lock(0);
     create_tabs_ui();  // Creeaza interfata grafica
-    s_lvgl_unlock();
     esp_rom_delay_us(100);
 
     xTaskCreatePinnedToCore(lv_main_task,        // Functia task-ului
