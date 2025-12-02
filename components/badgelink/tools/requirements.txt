@@ -1,4 +1,0 @@
-cobs
-protobuf
-pyserial
-pyusb

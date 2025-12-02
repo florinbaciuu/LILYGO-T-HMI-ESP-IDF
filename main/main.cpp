@@ -117,7 +117,7 @@ extern "C" {
 #include "esp_lcd_touch_xpt2046.h"
 
 // my include
-//#include "one-cli.h"
+// #include "one-cli.h"
 #include "filesystem-os.h"
 #include "ui.h"
 }
@@ -488,7 +488,20 @@ void chechButton0State(void* parameter) {
     }
 }
 /****************************/
+static void on_clock_update_timer_cb(struct _lv_timer_t* t) {
+    time_t               now;
+    struct tm            timeinfo;
+    ESP_Brookesia_Phone* phone = (ESP_Brookesia_Phone*) t->user_data;
 
+    time(&now);
+    localtime_r(&now, &timeinfo);
+
+    /* Since this callback is called from LVGL task, it is safe to operate LVGL */
+    // Update clock on "Status Bar"
+    ESP_BROOKESIA_CHECK_FALSE_EXIT(
+        phone->getHome().getStatusBar()->setClock(timeinfo.tm_hour, timeinfo.tm_min),
+        "Refresh status bar failed");
+}
 //--------------------------------------
 
 /*
@@ -750,12 +763,16 @@ extern "C" void app_main(void) {
 
     init_filesystem_sys();
     // initialize_filesystem_sdmmc() ;
-    //StartCLI();
+    // StartCLI();
 
     s_lvgl_port_init_locking_mutex();
     esp_rom_delay_us(100);
     s_lvgl_lock(0);
-    create_tabs_ui();  // Creeaza interfata grafica
+    // create_tabs_ui();  // Creeaza interfata grafica
+
+    
+
+    s_lvgl_unlock();
     esp_rom_delay_us(100);
 
     xTaskCreatePinnedToCore(lv_main_task,        // Functia task-ului

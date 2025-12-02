@@ -45,7 +45,6 @@ set(
     esp_cli_commands
     esp_linenoise #dezactiveaza neaparat console componenta din IDF
     argtable3
-    esp-brookesia
 )
 
 set(
