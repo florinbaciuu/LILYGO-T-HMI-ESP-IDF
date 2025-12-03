@@ -208,7 +208,7 @@
 		"accessibility.underlineLinks": true,
 		//------------------------------------------------------------------
 		//
-		"C_Cpp.intelliSenseEngine": "default", // disabled, Tag Parser
+		"C_Cpp.intelliSenseEngine": "disabled", // disabled, Tag Parser
 		"C_Cpp.intelliSenseCacheSize": 5120,
 		"C_Cpp.autocomplete": "disabled", // disabled, Default
 		"[cpp]": {

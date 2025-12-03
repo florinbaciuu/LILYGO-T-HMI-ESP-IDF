@@ -19,37 +19,27 @@ set(
 
 set(
     app_requires
+    button
+    cmake_utilities
     coremark
-    esp-file-iterator
-    esp_mmap_assets
-    fmt
+    # esp_cli
+    # esp_cli_commands
     esp_lcd_touch
     esp_lcd_touch_xpt2046
-    lvgl
-    esp_lvgl_port
-    esp_lv_decoder
-    esp_emote_gfx
-    esp_new_jpeg
+    # esp_linenoise
     esp_lv_fs
-    button
-    esp-lib-utils
+    esp_lvgl_port
+    esp_mmap_assets
+    fmt
+    freertos-cpp
     littlefs
-    xz
-    zlib
-    libpng
-    coremark
-    extended_vfs
-    esp_tinyusb
-    esp_schedule
-    esp_cli 
-    esp_cli_commands
-    esp_linenoise #dezactiveaza neaparat console componenta din IDF
-    argtable3
+    lvgl
 )
 
 set(
     app_priv_requires
     ${app_requires}
+    cmake_utilities
     esp_bootloader_format
     nvs_flash
     esp_wifi
@@ -63,9 +53,7 @@ set(
     esp_common
     esp_psram
     esp_hw_support
-    esp_wifi
-    esp_lcd
-    #console #pentru ca linenoise
+    console
 )
 
 # Set my components
@@ -74,7 +62,7 @@ set(
 # Put this components in /lib after set 
 # set(EXTRA_COMPONENT_DIRS lib) in root/CMakeLists.txt
 set(
-    my_components_add
+    my_components
     one-cli-v005
     onebutton-v001
     filesystem-v003
@@ -89,7 +77,7 @@ idf_component_register(
     ${app_include_dirs}
     REQUIRES
     ${app_requires}
-    ${my_components_add}
+    ${my_components}
     PRIV_REQUIRES
     ${app_priv_requires}
     WHOLE_ARCHIVE

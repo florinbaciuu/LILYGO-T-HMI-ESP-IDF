@@ -14,9 +14,7 @@ add_compile_definitions(LVGL_VERSION_MAJOR=9)
 # Seteaza folder extra pt componente
 set(
    EXTRA_COMPONENT_DIRS
-   lib
    mylibs
-   cmd
 )
 
 # ---------- ccache ------------------

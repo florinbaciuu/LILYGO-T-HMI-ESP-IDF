@@ -1,9 +1,0 @@
-dependencies:
-  idf: '>=4.1'
-description: xz decompression utility
-repository: git://github.com/espressif/esp-iot-solution.git
-repository_info:
-  commit_sha: d09966201afeab0135aa741e8ad6ed5a1ed09b6a
-  path: components/utilities/xz
-url: https://github.com/espressif/esp-iot-solution/tree/master/components/utilities/xz
-version: 1.1.0

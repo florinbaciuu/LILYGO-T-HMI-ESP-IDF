@@ -1,0 +1,10 @@
+dependencies:
+  cmake_utilities: 0.*
+  idf: '>=5.3'
+description: ESP LCD GC9107
+repository: git://github.com/espressif/esp-iot-solution.git
+repository_info:
+  commit_sha: c691068a00285523ed87dd101f39cffcf6ce9cef
+  path: components/display/lcd/esp_lcd_gc9107
+url: https://github.com/espressif/esp-bsp/tree/master/components/lcd/esp_lcd_gc9107
+version: 1.0.0

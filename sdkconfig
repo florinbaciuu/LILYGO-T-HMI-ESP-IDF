@@ -2041,34 +2041,6 @@ CONFIG_SPIFFS_TEST_VISUALISATION=y
 # end of SPIFFS Configuration
 
 #
-# USB-OTG
-#
-CONFIG_USB_HOST_CONTROL_TRANSFER_MAX_SIZE=256
-CONFIG_USB_HOST_HW_BUFFER_BIAS_BALANCED=y
-# CONFIG_USB_HOST_HW_BUFFER_BIAS_IN is not set
-# CONFIG_USB_HOST_HW_BUFFER_BIAS_PERIODIC_OUT is not set
-
-#
-# Hub Driver Configuration
-#
-
-#
-# Root Port configuration
-#
-CONFIG_USB_HOST_DEBOUNCE_DELAY_MS=250
-CONFIG_USB_HOST_RESET_HOLD_MS=30
-CONFIG_USB_HOST_RESET_RECOVERY_MS=30
-CONFIG_USB_HOST_SET_ADDR_RECOVERY_MS=10
-# end of Root Port configuration
-
-# CONFIG_USB_HOST_HUBS_SUPPORTED is not set
-# end of Hub Driver Configuration
-
-# CONFIG_USB_HOST_ENABLE_ENUM_FILTER_CALLBACK is not set
-CONFIG_USB_OTG_SUPPORTED=y
-# end of USB-OTG
-
-#
 # Virtual file system
 #
 CONFIG_VFS_SUPPORT_IO=y
@@ -2121,72 +2093,11 @@ CONFIG_CU_DIAGNOSTICS_COLOR_ALWAYS=y
 # end of CMake Utilities
 
 #
-# ESP Library Utils Configurations
-#
-CONFIG_ESP_UTILS_CONF_FILE_SKIP=y
-
-#
-# Check functions
-#
-# CONFIG_ESP_UTILS_CHECK_HANDLE_WITH_NONE is not set
-CONFIG_ESP_UTILS_CHECK_HANDLE_WITH_ERROR_LOG=y
-# CONFIG_ESP_UTILS_CHECK_HANDLE_WITH_ASSERT is not set
-CONFIG_ESP_UTILS_CONF_CHECK_HANDLE_METHOD=1
-# end of Check functions
-
-#
-# Log functions
-#
-# CONFIG_ESP_UTILS_CONF_LOG_IMPL_STDLIB is not set
-CONFIG_ESP_UTILS_CONF_LOG_IMPL_ESP=y
-CONFIG_ESP_UTILS_CONF_LOG_IMPL_TYPE=1
-# CONFIG_ESP_UTILS_CONF_LOG_LEVEL_DEBUG is not set
-CONFIG_ESP_UTILS_CONF_LOG_LEVEL_INFO=y
-# CONFIG_ESP_UTILS_CONF_LOG_LEVEL_WARNING is not set
-# CONFIG_ESP_UTILS_CONF_LOG_LEVEL_ERROR is not set
-# CONFIG_ESP_UTILS_CONF_LOG_LEVEL_NONE is not set
-CONFIG_ESP_UTILS_CONF_LOG_LEVEL=1
-# end of Log functions
-
-#
-# Memory functions
-#
-
-#
-# C/C++ general allocator
-#
-CONFIG_ESP_UTILS_CONF_MEM_GEN_ALLOC_DEFAULT_ENABLE=y
-CONFIG_ESP_UTILS_CONF_MEM_GEN_ALLOC_TYPE_STDLIB=y
-# CONFIG_ESP_UTILS_CONF_MEM_GEN_ALLOC_TYPE_ESP is not set
-# CONFIG_ESP_UTILS_CONF_MEM_GEN_ALLOC_TYPE_MICROPYTHON is not set
-# CONFIG_ESP_UTILS_CONF_MEM_GEN_ALLOC_TYPE_CUSTOM is not set
-CONFIG_ESP_UTILS_CONF_MEM_GEN_ALLOC_TYPE=0
-# end of C/C++ general allocator
-
-# CONFIG_ESP_UTILS_CONF_MEM_ENABLE_CXX_GLOB_ALLOC is not set
-# end of Memory functions
-
-CONFIG_ESP_UTILS_CONF_PLUGIN_SUPPORT=y
-# end of ESP Library Utils Configurations
-
-#
-# esp_cli configuration
-#
-# CONFIG_ESP_CLI_HAS_QUIT_CMD is not set
-# end of esp_cli configuration
-
-#
 # ESP LCD TOUCH
 #
 CONFIG_ESP_LCD_TOUCH_MAX_POINTS=1
 CONFIG_ESP_LCD_TOUCH_MAX_BUTTONS=1
 # end of ESP LCD TOUCH
-
-#
-# esp_linenoise configuration
-#
-CONFIG_ESP_LINENOISE_MAX_INSTANCE_NB=5
-# end of esp_linenoise configuration
 
 #
 # ESP LVGL PORT
@@ -2198,131 +2109,6 @@ CONFIG_ESP_LINENOISE_MAX_INSTANCE_NB=5
 #
 CONFIG_MMAP_FILE_NAME_LENGTH=16
 # end of mmap file support format
-
-#
-# ESP Schedule Configuration
-#
-CONFIG_ESP_SCHEDULE_ENABLE_DAYLIGHT=y
-# end of ESP Schedule Configuration
-
-#
-# TinyUSB Stack
-#
-CONFIG_TINYUSB_DEBUG_LEVEL=1
-CONFIG_TINYUSB_RHPORT_FS=y
-
-#
-# TinyUSB DCD
-#
-# CONFIG_TINYUSB_MODE_SLAVE is not set
-CONFIG_TINYUSB_MODE_DMA=y
-# end of TinyUSB DCD
-
-#
-# TinyUSB task configuration
-#
-# CONFIG_TINYUSB_NO_DEFAULT_TASK is not set
-CONFIG_TINYUSB_TASK_PRIORITY=5
-CONFIG_TINYUSB_TASK_STACK_SIZE=4096
-# CONFIG_TINYUSB_TASK_AFFINITY_NO_AFFINITY is not set
-# CONFIG_TINYUSB_TASK_AFFINITY_CPU0 is not set
-CONFIG_TINYUSB_TASK_AFFINITY_CPU1=y
-CONFIG_TINYUSB_TASK_AFFINITY=0x1
-# CONFIG_TINYUSB_INIT_IN_DEFAULT_TASK is not set
-# end of TinyUSB task configuration
-
-#
-# Descriptor configuration
-#
-
-#
-# You can provide your custom descriptors via tinyusb_driver_install()
-#
-CONFIG_TINYUSB_DESC_USE_ESPRESSIF_VID=y
-CONFIG_TINYUSB_DESC_USE_DEFAULT_PID=y
-CONFIG_TINYUSB_DESC_BCD_DEVICE=0x0100
-CONFIG_TINYUSB_DESC_MANUFACTURER_STRING="Espressif Systems"
-CONFIG_TINYUSB_DESC_PRODUCT_STRING="Espressif Device"
-CONFIG_TINYUSB_DESC_SERIAL_STRING="123456"
-# end of Descriptor configuration
-
-#
-# Massive Storage Class (MSC)
-#
-# CONFIG_TINYUSB_MSC_ENABLED is not set
-
-#
-# TinyUSB FAT Format Options
-#
-CONFIG_TINYUSB_FAT_FORMAT_ANY=y
-# CONFIG_TINYUSB_FAT_FORMAT_FAT is not set
-# CONFIG_TINYUSB_FAT_FORMAT_FAT32 is not set
-# CONFIG_TINYUSB_FAT_FORMAT_EXFAT is not set
-# CONFIG_TINYUSB_FAT_FORMAT_SFD is not set
-# end of TinyUSB FAT Format Options
-# end of Massive Storage Class (MSC)
-
-#
-# Communication Device Class (CDC)
-#
-# CONFIG_TINYUSB_CDC_ENABLED is not set
-# end of Communication Device Class (CDC)
-
-#
-# Musical Instrument Digital Interface (MIDI)
-#
-CONFIG_TINYUSB_MIDI_COUNT=0
-# end of Musical Instrument Digital Interface (MIDI)
-
-#
-# Human Interface Device Class (HID)
-#
-CONFIG_TINYUSB_HID_COUNT=0
-# end of Human Interface Device Class (HID)
-
-#
-# Device Firmware Upgrade (DFU)
-#
-# CONFIG_TINYUSB_DFU_MODE_DFU is not set
-# CONFIG_TINYUSB_DFU_MODE_DFU_RUNTIME is not set
-CONFIG_TINYUSB_DFU_MODE_NONE=y
-# end of Device Firmware Upgrade (DFU)
-
-#
-# Bluetooth Host Class (BTH)
-#
-# CONFIG_TINYUSB_BTH_ENABLED is not set
-# end of Bluetooth Host Class (BTH)
-
-#
-# Network driver (ECM/NCM/RNDIS)
-#
-# CONFIG_TINYUSB_NET_MODE_ECM_RNDIS is not set
-# CONFIG_TINYUSB_NET_MODE_NCM is not set
-CONFIG_TINYUSB_NET_MODE_NONE=y
-# end of Network driver (ECM/NCM/RNDIS)
-
-#
-# Vendor Specific Interface
-#
-CONFIG_TINYUSB_VENDOR_COUNT=0
-# end of Vendor Specific Interface
-# end of TinyUSB Stack
-
-#
-# Extended VFS
-#
-CONFIG_EXTENDED_VFS=y
-
-#
-# Peripherals
-#
-CONFIG_EXTENDED_VFS_GPIO=y
-CONFIG_EXTENDED_VFS_I2C=y
-CONFIG_EXTENDED_VFS_LEDC=y
-CONFIG_EXTENDED_VFS_SPI=y
-# end of Peripherals
-# end of Extended VFS
 
 #
 # LittleFS
