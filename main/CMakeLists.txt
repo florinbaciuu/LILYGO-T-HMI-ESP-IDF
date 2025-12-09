@@ -31,21 +31,21 @@ idf_component_register(
 add_compile_options(-Wno-error)
 
 idf_build_get_property(components BUILD_COMPONENTS)
-message(STATUS "@@@ ALL COMPONENTS  = ${components}")
+message(STATUS "@@@ ALL COMPONENTS seen from MAIN  = ${components}")
 
-target_compile_options(${COMPONENT_LIB} PUBLIC
-    -Wno-error
-    -Wno-error=cpp
-    -Wno-error=type-limits
-    -Wno-unused-variable
-    -Wno-unused-function
-    -Wno-error=deprecated-declarations
-)
+# target_compile_options(${COMPONENT_LIB} PUBLIC
+#     -Wno-error
+#     -Wno-error=cpp
+#     -Wno-error=type-limits
+#     -Wno-unused-variable
+#     -Wno-unused-function
+#     -Wno-error=deprecated-declarations
+# )
 
-set_source_files_properties(
-    main.cpp rtos.cpp temp_sensor_cpu.cpp
-    PROPERTIES COMPILE_FLAGS "-Wno-error=cpp -Wno-error "
-)
+# set_source_files_properties(
+#     main.cpp rtos.cpp temp_sensor_cpu.cpp
+#     PROPERTIES COMPILE_FLAGS "-Wno-error=cpp -Wno-error "
+# )
 
 
 # Note: you must have a partition named the first argument (here it's "littlefs")
