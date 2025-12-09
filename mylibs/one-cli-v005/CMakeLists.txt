@@ -145,11 +145,11 @@ set( # Asta adaug-o separat:
 # ------------------------------- #
 
 # dezactivează tratarea warningurilor ca erori pentru componenta asta
-target_compile_options(${COMPONENT_LIB} PRIVATE
-    -Wno-error
-    -Wno-error=type-limits
-    -Wno-unused-variable
-    -Wno-unused-function
+target_compile_options( ${COMPONENT_LIB} PRIVATE -Wno-error -Wno-error=type-limits -Wno-unused-variable -Wno-unused-function -Wno-error=cpp )
+set_source_files_properties(
+    src/init.c src/one-cli.c
+    PROPERTIES COMPILE_FLAGS "-Wno-error=cpp -Wno-error"
 )
 
-
+# ==================== #
+# mylibs/one-cli-v005/CMakeLists.txt

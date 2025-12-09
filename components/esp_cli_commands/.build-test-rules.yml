@@ -1,3 +1,0 @@
-esp_cli_commands/test_apps:
-  enable:
-    - if: (IDF_TARGET in ["esp32", "linux"]) and (IDF_VERSION_MAJOR == 5 and IDF_VERSION_MINOR >= 3)

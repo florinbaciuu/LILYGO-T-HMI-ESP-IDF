@@ -2,7 +2,10 @@
 #ifndef COMMAND_LINE_INTERFACE_H_
 #define COMMAND_LINE_INTERFACE_H_
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wcpp"
 #warning "Acest cod este scris de Florin Aurel Baciu"
+#pragma GCC diagnostic pop
 
 #include <string.h>
 #include <unistd.h>
